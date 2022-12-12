@@ -1,0 +1,14 @@
+from heapq import *
+class Solution:
+
+	def kLargest(self,arr, n, k):
+	    min_heap=[]
+	    for i in range(len(arr)):
+	        heappush(min_heap,arr[i])
+	        if len(min_heap)==k+1:
+	            heappop(min_heap)
+	   
+	    ans=[]
+	    while min_heap:
+	        ans.append(heappop(min_heap))
+	    return ans[::-1]
