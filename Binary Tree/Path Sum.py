@@ -9,7 +9,7 @@ class Solution:
         def solve(root,target,s):
             if not root:
                 return 
-            s+=+root.val
+            s+=root.val
             if not root.left and not root.right:
                 if s==target:
                     return True
